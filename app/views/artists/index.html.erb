@@ -1,0 +1,17 @@
+<!-- <% @artists.each do |artist| %>
+  <h2><%= link_to artist.name, artist_path(artist) %></h2>
+    Song Count: <%= artist.song_count %>
+    <% artist.songs.each do |song| %>
+      <ul>
+        <li><%= song.title %></li>
+      </ul>
+    <% end %>
+<% end %> -->
+
+<h1>All Artists</h1>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <li><%= link_to artist.name, artist_path(artist) %> - <%= artist.song_count_text %></li>
+  <% end %>
+</ul>
