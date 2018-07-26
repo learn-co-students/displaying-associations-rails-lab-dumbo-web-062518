@@ -1,0 +1,8 @@
+<h1><%= @artist.name %></h1>
+
+<p><%= "#{@artist.songs.length} songs" if @artist.songs.length > 0 %> </p>
+<ul>
+  <% @artist.songs.each do |s| %>
+  <li><%= link_to s.title, song_path(s) %></li>
+  <% end %>
+</ul>
